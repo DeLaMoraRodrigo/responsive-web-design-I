@@ -1,3 +1,428 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+/* ol, ul {
+	list-style: none;
+} */
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+	box-sizing: border-box;
+	/* border: 2px solid grey; */
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+body {
+	margin: 50px 10% 200px 10%;
+}
+
+h2 {
+	font-size: 40px;
+}
+
+p {
+	font-size: 25px;
+}
+
+/* This is the Nav CSS */
+header nav {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.linksDiv {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-right: 10%;
+}
+
+.linksDiv a {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	color: grey;
+	font-size: 25px;
+}
+
+.logo {
+	height: 6vh
+}
+
+/* This is the title and image CSS */
+.top {
+	display: flex;
+	justify-content: space-around;
+	margin: 80px 0;
+}
+
+.mainDiv {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.superBig {
+	font-size: 100px;
+	font-family: 'Modak', cursive;
+	text-align: center;
+}
+
+.mainP {
+	border: 2px solid grey;
+	padding: 10px 50px;
+}
+
+/* This is the features and about CSS */
+.featuresAbout {
+	display: flex;
+	border-top: 2px solid grey;
+	padding: 50px 0;
+}
+
+/* This is the img CSS */
+.middle-img {
+	width: 100%;
+}
+
+/* This is the services and product CSS */
+.servicesProduct {
+	display: flex;
+	border-bottom: 2px solid grey;
+	padding: 50px 0;
+}
+
+/* This is the footer CSS */
+footer {
+	margin: 50px 0;
+}
+
+address {
+	font-size: 25px;
+}
+.copyright {
+	text-align: center;
+	padding: 50px 0 150px;
+}
+
+/* **************************This is the services.html CSS****************************** */
+
+/* This is the top img CSS */
+.topImg {
+	margin: 50px 0;
+}
+
+.services-header-img {
+	width: 100%;
+}
+
+/* This is the services section CSS */
+.servicesSection {
+	padding-bottom: 50px;
+	border-bottom: 2px solid grey;
+	margin-bottom: 50px;
+}
+
+/* This is the development section CSS */
+h3 {
+	font-size: 32px;
+}
+
+.developmentSection {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding-bottom: 50px;
+	border-bottom: 2px solid grey;
+}
+
+.developmentDiv {
+	border: 2px solid grey;
+	background-color: lightgrey;
+	padding: 30px;
+	margin: 17px 0;
+	width: 49%;
+}
+
+.dP {
+	padding: 20px 0;
+}
+
+.dButton {
+	padding: 20px 50px;
+	margin-top: 10px;
+	font-size: 25px;
+	border-radius: 10px;
+	border: 2px solid grey;
+}
+
+/* This is the facts section CSS */
+.factsSection {
+	display: flex;
+	justify-content: space-between;
+	margin: 50px 0;
+}
+
+.factsDiv {
+	width: 45%;
+}
+
+.servicesImg {
+    width: 45%;
+}
+
+.services-info-img {
+	width: 100%;
+	height: 45vh;
+}
+
+.factsP {
+	padding: 20px 0;
+}
+
+.factsDiv ul {
+	font-size: 25px;
+	margin-left: 3.5%;
+	padding: 15px 0;
+}
+
+.factsDiv ul li {
+	padding-bottom: 20px;
+	list-style-type: square;
+}
+
+/* This is the footer CSS */
+footer p {
+	text-align: center;
+	font-size: 25px;
+	margin: 200px 0 50px;
+}
+
+/* **********************************Tablet Media Query********************************* */
+@media (max-width: 800px){
+    nav {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .logoDiv {
+        margin: 5vh auto;
+    }
+
+    .mainImgDiv {
+        display: none;
+    }
+
+    .mainDiv h1 {
+        padding-bottom: 5vh;
+    }
+
+    .featuresAbout {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .topDiv {
+        width: 45%;
+    }
+
+    .servicesProduct {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .bottomDiv {
+        width: 30%;
+    }
+
+    /* *******************************Services.html Media Query**************************** */
+    .developmentSection {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .developmentDiv {
+        width: 100%;
+    }
+
+    .factsSection {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .servicesImg {
+        width: 100%;
+        margin-bottom: 3vh;
+    }
+
+    .factsDiv {
+        width: 100%;
+    }
+
+    footer p {
+        margin: 10vh 0 5vh;
+    }
+}
+
+/* *************************************Moblie Media Query********************************* */
+@media (max-width: 500px){
+    body {
+        margin: 0;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .linksDiv {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .linksDiv a {
+        margin: 0 auto;
+        padding: 3vh 0;
+        border-bottom: 2px solid black;
+        width: 100%;
+        justify-content: center;
+    }
+
+    #firstLink {
+        border-top: 2px solid black;
+    }
+
+    .logoDiv {
+        margin: 3vh auto 3vh;
+    }
+
+    .mainImgDiv {
+        display: none;
+    }
+
+    .top {
+        margin: 50px 10% 200px 10%;
+    }
+
+    .superBig {
+        width: 100%;
+        font-size: 70px;
+    }
+
+    .middle {
+        margin: 50px 10% 200px 10%;
+    }
+
+    footer {
+        margin: 50px 10% 200px 10%;
+    }
+
+    .featuresAbout {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .servicesProduct {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .topDiv {
+        padding-bottom: 3vh;
+        width: 100%;
+    }
+
+    .bottomDiv {
+        padding-bottom: 3vh;
+        width: 100%;
+    }
+
+    /* *****************************Services.html Media Query***************************** */
+    #servicesFirstLink {
+        border-top: 2px solid black;
+    }
+
+    .servicesSection {
+        margin: 0 5%;
+    }
+
+    .developmentSection {
+        margin: 0 5%;
+    }
+
+    .factsSection {
+        margin: 0 5%;
+    }
+
+    .factsSection ul {
+        margin: 0 7%;
+    }
+
+    .top {
+        margin: 50px 10% 5vh 10%;
+    }
+
+    .middle {
+        margin: 50px 10% 5vh 10%;
+    }
+
+    footer {
+        margin: 2vh 10% 5vh 10%;
+    }
+
+}
 
